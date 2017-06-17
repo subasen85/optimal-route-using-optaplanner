@@ -3,7 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="en">
 <head>
-
 <link rel="stylesheet" type="text/css"
 	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
 
@@ -15,30 +14,78 @@
 <link href="${jstlCss}" rel="stylesheet" />
 
 </head>
+<script>
+$(window).on("load resize ", function() {
+	  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+	  $('.tbl-header').css({'padding-right':scrollWidth});
+	}).resize();
+
+</script>
 <body>
-
-	<nav class="navbar navbar-inverse">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Spring Boot</a>
-			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#about">About</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
+<%@ include file = "header.jsp" %>
 	<div class="container">
-
 		<div class="starter-template">
-			<h1>Spring Boot Web JSP Example</h1>
-			<h2>Message: ${message}</h2>
+			<h2>Optiminal Route</h2>
+			<h2>Depot</h2>
 		</div>
+		<div>
+			<span style="font-size: large;">Loc-Latitude:</span><span class="span-alignment"> 20.08939</span>
+		</div>
+		<div>
+			<span style="font-size: large;">Loc-Longitude:</span><span class="span-alignment"> 18.3452</span>
+		</div>
+	<section>		
+		<div class="tbl-header">
+    	<TABLE cellpadding="0" cellspacing="0" border="0">
+    	<thead>
+				<TR>
+					<TH>CustomerID</TH>
+					<TH>Latitude</TH>
+					<TH>Longitude</TH>
+					<TH>CustomerDemand</TH>
+				</TR>
+      	</thead>
+    	</table>
+		</div>
+		<div class="tbl-content">
+	    <table cellpadding="0" cellspacing="0" border="0">
+	      <tbody>
+				<TR>
+					<TD>1</td>
+					<TD>18.641400</TD>
+					<TD>72.872200</TD>
+					<TD>20</TD>
+				</TR>
+				<TR>
+					<TD>2</td>
+					<TD>18.964700</TD>
+					<TD>72.825800</TD>
+					<TD>20</TD>
+				</TR>
+				<TR>
+					<TD>3</td>
+					<TD>18.523600</TD>
+					<TD>73.847800</TD>
+					<TD>20</TD>
+				</TR>
+				<TR>
+					<TD>4</td>
+					<TD>18.0367</TD>
+					<TD>20.8982</TD>
+					<TD>20</TD>
+				</TR>
+				<TR>
+					<TD>5</td>
+					<TD>13.0367</TD>
+					<TD>15.8982</TD>
+					<TD>20</TD>
+				</TR>
+			</tbody>
+	    </table>
+	  </div>
+	 </section>
+	 <div><a href="/optimalroute">Find Optimal Route</a></div>
 
-	</div>
 	<!-- /.container -->
 
 	<script type="text/javascript"
