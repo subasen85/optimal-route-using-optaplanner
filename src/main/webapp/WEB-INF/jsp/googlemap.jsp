@@ -37,6 +37,18 @@ var markers = [
                    "lat": '18.523600',
                    "lng": '73.847800',
                    "description": 'Pune is the seventh largest metropolis in India, the second largest in the state of Maharashtra after Mumbai.'
+               },
+               {
+                   "title": 'Ahmedabad',
+                   "lat": '23.0204978',
+                   "lng": '72.4396531',
+                   "description": 'Ahmedabad is an clean and big city in India.'
+               },
+               {
+                   "title": 'MadhyaPradesh',
+                   "lat": '23.4312446',
+                   "lng": '76.5466449',
+                   "description": 'MadhyaPradesh is a coastal town and an most population council in India.'
                }
    ];
            window.onload = function () {

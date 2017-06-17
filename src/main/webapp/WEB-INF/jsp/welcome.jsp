@@ -19,10 +19,22 @@ $(window).on("load resize ", function() {
 	  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
 	  $('.tbl-header').css({'padding-right':scrollWidth});
 	}).resize();
-
+function btntest_onclick() 
+{
+	document.getElementById("loader").style.display = "block";
+	 
+	myVar = setTimeout(showPage, 4000);
+	
+    
+}
+function showPage() {
+	document.getElementById("loader").style.display = "none";
+	  window.location.href = "/optimalroute";
+	}	
 </script>
 <body>
 <%@ include file = "header.jsp" %>
+	<div id="loader"></div>
 	<div class="container">
 		<div class="starter-template">
 			<h2>Optiminal Route</h2>
@@ -84,7 +96,9 @@ $(window).on("load resize ", function() {
 	    </table>
 	  </div>
 	 </section>
-	 <div><a href="/optimalroute">Find Optimal Route</a></div>
+	 <!-- <div><a href="/optimalroute">Find Optimal Route</a></div> -->
+	 <input id="btntest" type="button" value="Find Optimial Route" 
+       onclick="btntest_onclick()" />
 
 	<!-- /.container -->
 
